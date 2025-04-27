@@ -1,11 +1,6 @@
-require('dotenv').config();
+
 	mapboxgl.accessToken = mapToken;
     
-const mbxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
-const mapBoxToken = process.env.MAPBOX_TOKEN;
-
-const geocodingClient = mbxGeocoding({ accessToken: mapBoxToken });
-
     const map = new mapboxgl.Map({
         container: 'map', // container ID
         style: "mapbox://styles/mapbox/streets-v12",

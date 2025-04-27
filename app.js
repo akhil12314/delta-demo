@@ -16,6 +16,12 @@ const flash=require("connect-flash");
 const passport=require("passport");
 const localStrategy=require("passport-local");
 const User=require("./models/user.js");
+require('dotenv').config();
+
+const mbxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
+const mapBoxToken = process.env.MAPBOX_TOKEN;
+
+const geocodingClient = mbxGeocoding({ accessToken: mapBoxToken });
 
 
 const listingRouter=require("./routes/listing.js");
