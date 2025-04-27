@@ -19,7 +19,7 @@ const User=require("./models/user.js");
 require('dotenv').config();
 
 const mbxGeocoding = require('@mapbox/mapbox-sdk/services/geocoding');
-const mapBoxToken = process.env.MAPBOX_TOKEN;
+const mapBoxToken = process.env.MAP_TOKEN;
 
 const geocodingClient = mbxGeocoding({ accessToken: mapBoxToken });
 
